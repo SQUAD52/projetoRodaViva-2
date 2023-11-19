@@ -1,0 +1,35 @@
+
+#corpoTalentos{
+    padding-top: 6em !important;
+    padding-bottom: 2em !important;
+}
+
+#fundo {
+    opacity: 0.3;
+    height: 22rem;
+    z-index: 0;
+}
+
+.row span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#card-perfil{
+    padding: 0%;
+    margin-left: 2em;
+    margin-bottom: 1.3em;
+}
+
+#msgTopo{
+    margin-left: 1em;
+}
+
+#sectionPerfil{
+    border-left: 1px solid;
+}
+
+aside{
+    padding-top: 6em !important;
+    padding-bottom: 2em !important; 
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,28 @@
+/*Área footer*/
+
+.socials-paragraph {
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+
+.socials {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 0 0.5rem 0 !important;
+  gap: 25px !important;
+}
+
+.socials a {
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.socials a i {
+  font-size: 1.6rem !important;
+  transition: color 0.4s ease !important;
+}
+
+.socials a:hover i {
+  color: aqua !important;
+}
