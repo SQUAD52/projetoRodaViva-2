@@ -73,33 +73,34 @@
 				</div>
 				<c:forEach items="${listaEmpresas}" var="empresa">
 
-					<div class="col-sm border-bottom ">
+					<div class="col-sm border-bottom mb-3 ms-3 " style="width: 18rem;">
 
 						<h1 class="text-center">${empresa.nome }</h1>
 
 						<hr />
-						<p>
+						<p class="card-text">
 							<label class="fw-bold">Telefone: </label> <label>${empresa.telefone }</label>
 						</p>
 						<hr>
-						<p>
+						<p class="card-text">
 							<label class="fw-bold">Email: </label> <label>${empresa.email }</label>
 						</p>
-						<p>
+						<p class="card-text">
 							<label class="fw-bold">Vagas Disponíveis: </label> <label>${empresa.vagas }</label>
 						</p>
 						<hr>
 
-
-						<a href="./candidato-create?id=${empresa.id }"
-							class="btn btn-sm btn-primary">Candidatar-se</a> <a
-							href="./empresa-update?id=${empresa.id }"
-							class="btn btn-sm btn-warning">editar</a> <a
-							href="./empresa-delete?id=${empresa.id }"
-							onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
-							class="btn btn-sm btn-danger">excluir</a>
+						<div class="row">
+							<a href="./candidato-create?id=${empresa.id }"
+								class="btn btn-sm btn-primary">Candidatar-se</a> <a
+								href="./empresa-update?id=${empresa.id }"
+								class="btn btn-sm btn-warning">editar</a> <a
+								href="./empresa-delete?id=${empresa.id }"
+								onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
+								class="btn btn-sm btn-danger">excluir</a>
+						</div>
 					</div>
-					</div>
+					
 
 
 				</c:forEach>

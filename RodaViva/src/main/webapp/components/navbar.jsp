@@ -34,14 +34,14 @@
 
 			<!--Inicio login e cadastro-->
 			<div>
-				<a href="Cadastro.html"><button type="button"
+				<a href="#"><button type="button"
 						class="btn btn-sm btn-dark">Login</button></a> <a
 					href=<%=request.getParameter("create-talentos")%>><button
 						type="button" class="btn btn-sm btn-light border-black">Cadastrar
 						talento</button></a> <a href=<%=request.getParameter("create-candidatos")%>><button
-						type="button" class="btn btn-sm btn-warning my-2">Candidatar
+						type="button" class="btn btn-sm btn-warning my-2 border-black">Candidatar
 						à vagas</button></a><a href=<%=request.getParameter("create-empresas")%>><button
-						type="button" class="btn btn-sm btn-success my-2">Cadastrar
+						type="button" class="btn btn-sm btn-success my-2 border-black">Cadastrar
 						Empresa</button></a>
 			</div>
 			<!--Fim login e cadastro-->
