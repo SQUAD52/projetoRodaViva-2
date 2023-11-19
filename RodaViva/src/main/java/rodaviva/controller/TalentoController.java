@@ -9,31 +9,28 @@ import jakarta.servlet.http.HttpServletResponse;
 import rodaviva.dao.TalentoDAO;
 import rodaviva.model.Talento;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-
-
 @WebServlet(urlPatterns = { "/talento", "/talento-create", "/talento-delete", "/talento-update" })
 public class TalentoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	TalentoDAO tdao = new TalentoDAO();
 	Talento talento = new Talento();
 	SimpleDateFormat simpleData = new SimpleDateFormat("yyyy-MM-dd");
 	Date dataParaBanco = new Date();
-	
-    public TalentoController() {
-        super();
-    }
 
+	public TalentoController() {
+		super();
+	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String action = request.getServletPath();
 
 		switch (action) {
@@ -48,15 +45,15 @@ public class TalentoController extends HttpServlet {
 			updateTalento(request, response);
 			break;
 		case "/talento-create":
-			response.sendRedirect("views/talento/formTalento.jsp");		
+			response.sendRedirect("views/talento/formTalento.jsp");
 			break;
-		
+
 		}
 	}
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String action = request.getServletPath();
 
 		switch (action) {
@@ -88,6 +85,7 @@ public class TalentoController extends HttpServlet {
 
 	protected void createTalento(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		String dataFormulario = request.getParameter("nDataNascimento");
 		try {
 			dataParaBanco = simpleData.parse(dataFormulario);
@@ -100,7 +98,9 @@ public class TalentoController extends HttpServlet {
 		talento.setNome(request.getParameter("nNome"));
 		talento.setCpf(request.getParameter("nCPF"));
 		talento.setEmail(request.getParameter("nEmail"));
+		talento.setFormacao(request.getParameter("nFormacao"));
 		talento.setTelefone(request.getParameter("nTelefone"));
+		talento.setCep(request.getParameter("nCep"));
 		talento.setEndereco(request.getParameter("nEndereco"));
 		talento.setEstado(request.getParameter("nEstado"));
 		talento.setCidade(request.getParameter("nCidade"));
@@ -114,7 +114,7 @@ public class TalentoController extends HttpServlet {
 		talento = tdao.getTalentoById(id);
 
 		request.setAttribute("talento", talento);
-		RequestDispatcher rd = request.getRequestDispatcher("./views/talentos/updateTalento.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("./views/talento/updateTalento.jsp");
 		rd.forward(request, response);
 	}
 
@@ -127,12 +127,14 @@ public class TalentoController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		talento.setId(Integer.parseInt(request.getParameter("nId")));
+		talento.setId(Long.parseLong(request.getParameter("nId")));
 		talento.setDataNascimento(dataParaBanco);
 		talento.setNome(request.getParameter("nNome"));
 		talento.setCpf(request.getParameter("nCPF"));
 		talento.setEmail(request.getParameter("nEmail"));
+		talento.setFormacao(request.getParameter("nFormacao"));
 		talento.setTelefone(request.getParameter("nTelefone"));
+		talento.setCep(request.getParameter("nCep"));
 		talento.setEndereco(request.getParameter("nEndereco"));
 		talento.setEstado(request.getParameter("nEstado"));
 		talento.setCidade(request.getParameter("nCidade"));

@@ -18,8 +18,8 @@ public class TalentoDAO {
 		 * de dados
 		 */
 
-		String sql = "INSERT INTO talento(nome,cpf,dataNascimento,email,formacao,telefone,foto,cep,endereco,cidade,estado)"
-				+ " VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO talento(nome,cpf,dataNascimento,email,formacao,telefone,cep,endereco,cidade,estado)"
+				+ " VALUES(?,?,?,?,?,?,?,?,?,?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -38,11 +38,10 @@ public class TalentoDAO {
 			pstm.setString(4, talento.getEmail());
 			pstm.setString(5, talento.getFormacao());
 			pstm.setString(6, talento.getTelefone());
-			pstm.setByte(7, talento.getFoto());
-			pstm.setString(8, talento.getCep());
-			pstm.setString(9, talento.getEndereco());
-			pstm.setString(10, talento.getCidade());
-			pstm.setString(11, talento.getEstado());
+			pstm.setString(7, talento.getCep());
+			pstm.setString(8, talento.getEndereco());
+			pstm.setString(9, talento.getCidade());
+			pstm.setString(10, talento.getEstado());
 
 			// Executa a sql para inserção dos dados
 			pstm.execute();
@@ -97,7 +96,7 @@ public class TalentoDAO {
 	}
 
 	public void update(Talento talento) {
-		String sql = "UPDATE talento SET nome = ?, cpf = ?, dataNascimento = ?, email = ?, formacao = ?, telefone = ?, foto = ?, cep = ?, endereco = ?, cidade = ?, estado = ? "
+		String sql = "UPDATE talento SET nome = ?, cpf = ?, dataNascimento = ?, email = ?, formacao = ?, telefone = ?, cep = ?, endereco = ?, cidade = ?, estado = ? "
 				+ "WHERE id = ?";
 
 		Connection conn = null;
@@ -117,12 +116,11 @@ public class TalentoDAO {
 			pstm.setString(4, talento.getEmail());
 			pstm.setString(5, talento.getFormacao());
 			pstm.setString(6, talento.getTelefone());
-			pstm.setByte(7, talento.getFoto());
-			pstm.setString(8, talento.getCep());
-			pstm.setString(9, talento.getEndereco());
-			pstm.setString(10, talento.getCidade());
-			pstm.setString(11, talento.getEstado());
-			pstm.setLong(12, talento.getId());
+			pstm.setString(7, talento.getCep());
+			pstm.setString(8, talento.getEndereco());
+			pstm.setString(9, talento.getCidade());
+			pstm.setString(10, talento.getEstado());
+			pstm.setLong(11, talento.getId());
 
 			// Executa a sql para inserção dos dados
 			pstm.execute();
@@ -172,7 +170,6 @@ public class TalentoDAO {
 				talento.setEmail(rset.getString("email"));
 				talento.setFormacao(rset.getString("formacao"));
 				talento.setTelefone(rset.getString("telefone"));
-				talento.setFoto(rset.getByte("foto"));
 				talento.setCep(rset.getString("cep"));
 				talento.setEndereco(rset.getString("endereco"));
 				talento.setCidade(rset.getString("cidade"));
@@ -223,7 +220,6 @@ public class TalentoDAO {
 			talento.setEmail(rset.getString("email"));
 			talento.setFormacao(rset.getString("formacao"));
 			talento.setTelefone(rset.getString("telefone"));
-			talento.setFoto(rset.getByte("foto"));
 			talento.setCep(rset.getString("cep"));
 			talento.setEndereco(rset.getString("endereco"));
 			talento.setCidade(rset.getString("cidade"));
@@ -272,7 +268,6 @@ public class TalentoDAO {
 			talento.setEmail(rset.getString("email"));
 			talento.setFormacao(rset.getString("formacao"));
 			talento.setTelefone(rset.getString("telefone"));
-			talento.setFoto(rset.getByte("foto"));
 			talento.setCep(rset.getString("cep"));
 			talento.setEndereco(rset.getString("endereco"));
 			talento.setCidade(rset.getString("cidade"));

@@ -10,7 +10,6 @@ public class Talento {
 	private String email;
 	private String formacao;
 	private String telefone;
-	private byte foto;
 	private String cep;
 	private String endereco;
 	private String cidade;
@@ -21,7 +20,7 @@ public class Talento {
 	}
 
 	public Talento(long id, String nome, String cpf, Date dataNascimento, String email, String formacao,
-			String telefone, byte foto, String cep, String endereco, String cidade, String estado) {
+			String telefone, String cep, String endereco, String cidade, String estado) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -30,7 +29,6 @@ public class Talento {
 		this.email = email;
 		this.formacao = formacao;
 		this.telefone = telefone;
-		this.foto = foto;
 		this.cep = cep;
 		this.endereco = endereco;
 		this.cidade = cidade;
@@ -91,14 +89,6 @@ public class Talento {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public byte getFoto() {
-		return foto;
-	}
-
-	public void setFoto(byte foto) {
-		this.foto = foto;
 	}
 
 	public String getCep() {
