@@ -29,4 +29,14 @@
     <servlet-name>NavController</servlet-name>
     <url-pattern>/NavController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmpresaController</display-name>
+    <servlet-name>EmpresaController</servlet-name>
+    <servlet-class>rodaviva.controller.EmpresaController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmpresaController</servlet-name>
+    <url-pattern>/EmpresaController</url-pattern>
+  </servlet-mapping>
 </web-app>

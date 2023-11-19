@@ -21,7 +21,6 @@
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
-		<jsp:param value="/assets/img/logoRodaVivaSemFundo.png" name="imglogo"/>
 		<jsp:param value="./" name="home" />
 		<jsp:param value="../talento" name="talentos" />
 		<jsp:param value="../curso" name="cursos" />
@@ -30,6 +29,7 @@
 		<jsp:param value="../empresa" name="empresas" />
 		<jsp:param value="../talento-create" name="create-talentos" />
 		<jsp:param value="../candidato-create" name="create-candidatos" />
+		<jsp:param value="../empresa-create" name="create-empresas" />
 
 	</jsp:include>
 
@@ -44,9 +44,9 @@
 				contribua com diversidade e competitividade no mercado de trabalho.</p>
 		</div>
 		<div class="btn-group gap-1 flex-wrap mt-5">
-			<a href="Cadastro.html"><button type="button"
+			<a href="../talento-create"><button type="button"
 					class="btn btn-light border-black">Cadastre-se como
-					talento</button></a> <a href="/talento"><button type="button"
+					talento</button></a> <a href="../candidato-create"><button type="button"
 					class="btn btn-warning">Candidatar à vagas</button></a>
 		</div>
 	</section>

@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Talentos</title>
+<title>Empresas</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -67,47 +67,38 @@
 			</div>
 		</aside>
 		<article class="col-sm" id="sectionPerfil">
-			<section class="container-fluid row" id="corpoTalentos">
+			<section class="container-fluid row" id="corpoEmpresas">
 				<div class="text-center text-muted my-3 row" id="msgTopo">
-					<h1>Aqui você encontra os melhores perfil para contribuir na
-						sua empresa.</h1>
+					<h1>Empresas Parceiras</h1>
 				</div>
-				<c:forEach items="${listaTalentos}" var="talento">
-					<div class="card mb-3 mx-3 border-dark " style="width: 18rem;">
-						<div class="card-header fw-bold text-center">${talento.nome}</div>
-						<div class="card-body">
-							<p>
-								<label class="fw-bold">Telefone: </label> <label>${talento.telefone }</label>
-							</p>
-							<hr>
-							<p>
-								<label class="fw-bold">Email: </label> <label>${talento.email }</label>
-							</p>
-							<hr>
-							<p class="card-text">
-								<label class="fw-bold">Formações e Cursos: </label> <label>${talento.formacao}</label>
-							</p>
+				<c:forEach items="${listaEmpresas}" var="empresa">
 
-							<hr>
-							<p>
-								<label class="fw-bold">Cidade: </label> <label>${talento.cidade }</label>
-							</p>
-							<hr>
-							<p>
-								<label class="fw-bold">Estado: </label> <label>${talento.estado }</label>
-							</p>
-							
+					<div class="col-sm border-bottom ">
 
-						</div>
-						<div class="card-footer text-body-secondary text-center">
-							<a href="./candidato-create?id=${talento.id }"
-								class="btn btn-sm btn-primary">Contratar</a> <a
-								href="./talento-update?id=${talento.id }"
-								class="btn btn-sm btn-warning">editar</a> <a
-								href="./talento-delete?id=${talento.id }"
-								onclick="return confirm('Deseja Excluir o usuario ${talento.nome}?')"
-								class="btn btn-sm btn-danger">excluir</a>
-						</div>
+						<h1 class="text-center">${empresa.nome }</h1>
+
+						<hr />
+						<p>
+							<label class="fw-bold">Telefone: </label> <label>${empresa.telefone }</label>
+						</p>
+						<hr>
+						<p>
+							<label class="fw-bold">Email: </label> <label>${empresa.email }</label>
+						</p>
+						<p>
+							<label class="fw-bold">Vagas Disponíveis: </label> <label>${empresa.vagas }</label>
+						</p>
+						<hr>
+
+
+						<a href="./candidato-create?id=${empresa.id }"
+							class="btn btn-sm btn-primary">Candidatar-se</a> <a
+							href="./empresa-update?id=${empresa.id }"
+							class="btn btn-sm btn-warning">editar</a> <a
+							href="./empresa-delete?id=${empresa.id }"
+							onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
+							class="btn btn-sm btn-danger">excluir</a>
+					</div>
 					</div>
 
 

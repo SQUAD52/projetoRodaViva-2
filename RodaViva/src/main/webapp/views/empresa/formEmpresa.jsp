@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cadastro</title>
+<title>Cadastro Empresa</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -36,24 +36,18 @@
 	</jsp:include>
 
 
-	<form action="../../talento-create" class="container-fluid"
+	<form action="../../empresa-create" class="container-fluid"
 		method="post">
 		<fieldset>
-			<legend class="my-3">Dados Pessoais</legend>
+			<legend class="my-3">Dados Empresa</legend>
 			<div class="form-group my-3">
 				<label for="iNome" class="form-label">Nome:</label> <input
 					type="text" id="iNome" name="nNome" class="form-control" required />
 			</div>
 
 			<div class="form-group my-3">
-				<label for="iCpf" class="form-label">CPF:</label> <input type="text"
-					id="iCpf" name="nCPF" class="form-control" maxLength="11" required/>
-			</div>
-
-			<div class="form-group my-3">
-				<label for="iDataNascimento" class="form-label">Data Nasc. :</label>
-				<input type="date" id="iDataNascimento" name="nDataNascimento"
-					class="form-control" required/>
+				<label for="iCnpj" class="form-label">CNPJ:</label> <input type="text"
+					id="iCnpj" name="nCNPJ" class="form-control" maxLength="14" required/>
 			</div>
 
 			<div class="form-group my-3">
@@ -62,13 +56,13 @@
 			</div>
 
 			<div class="form-group my-3">
-				<label for="iFormacao" class="form-label">Formações:</label> <input
-					type="text" id="iFormacao" name="nFormacao" class="form-control" required/>
-			</div>
-
-			<div class="form-group my-3">
 				<label for="iTelefone" class="form-label">Telefone:</label> <input
 					type="text" id="iTelefone" name="nTelefone" class="form-control" maxLength="11" required/>
+			</div>
+			
+			<div class="form-group my-3">
+				<label for="iVagas" class="form-label">Vagas Disponíveis:</label> <input
+					type="text" id="iVagas" name="nVagas" class="form-control" required/>
 			</div>
 
 

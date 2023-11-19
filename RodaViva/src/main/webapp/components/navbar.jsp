@@ -4,8 +4,8 @@
 <header
 	class="navbar navbar-expand-lg bg-info-subtle fixed-top shadow-sm">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img
-			src=<%=request.getParameter("imglogo")%>
+		<a class="navbar-brand" href=<%=request.getParameter("home")%>><img
+			src="/assets/img/logoRodaVivaSemFundoPeq.png"
 			alt="logotipo espaço roda viva" class="img-responsive"></a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
@@ -40,11 +40,13 @@
 						type="button" class="btn btn-sm btn-light border-black">Cadastrar
 						talento</button></a> <a href=<%=request.getParameter("create-candidatos")%>><button
 						type="button" class="btn btn-sm btn-warning my-2">Candidatar
-						à vagas</button></a>
+						à vagas</button></a><a href=<%=request.getParameter("create-empresas")%>><button
+						type="button" class="btn btn-sm btn-success my-2">Cadastrar
+						Empresa</button></a>
 			</div>
 			<!--Fim login e cadastro-->
 
 		</div>
 	</div>
-	
+
 </header>

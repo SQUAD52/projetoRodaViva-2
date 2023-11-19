@@ -16,8 +16,8 @@ public class EmpresaDAO {
 		 * de dados
 		 */
 
-		String sql = "INSERT INTO empresa(nome,cnpj,email,telefone,imgLogo,cep,endereco,cidade,estado,vagas)"
-				+ " VALUES(?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO empresa(nome,cnpj,email,telefone,cep,endereco,cidade,estado,vagas)"
+				+ " VALUES(?,?,?,?,?,?,?,?,?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -34,12 +34,11 @@ public class EmpresaDAO {
 			pstm.setString(2, empresa.getCnpj());
 			pstm.setString(3, empresa.getEmail());
 			pstm.setString(4, empresa.getTelefone());
-			pstm.setByte(5, empresa.getImgLogo());
-			pstm.setString(6, empresa.getCep());			
-			pstm.setString(7, empresa.getEndereco());
-			pstm.setString(8, empresa.getCidade());
-			pstm.setString(9, empresa.getEstado());
-			pstm.setString(10, empresa.getVagas());
+			pstm.setString(5, empresa.getCep());			
+			pstm.setString(6, empresa.getEndereco());
+			pstm.setString(7, empresa.getCidade());
+			pstm.setString(8, empresa.getEstado());
+			pstm.setString(9, empresa.getVagas());
 
 			// Executa a sql para inserção dos dados
 			pstm.execute();
@@ -94,7 +93,7 @@ public class EmpresaDAO {
 	}
 
 	public void update(Empresa empresa) {
-		String sql = "UPDATE empresa SET nome = ?, cnpj = ?, email = ?, telefone = ?, imgLogo = ?, cep = ?, endereco = ?, cidade = ?, estado = ?, vagas = ? "
+		String sql = "UPDATE empresa SET nome = ?, cnpj = ?, email = ?, telefone = ?, cep = ?, endereco = ?, cidade = ?, estado = ?, vagas = ? "
 				+ "WHERE id = ?";
 
 		Connection conn = null;
@@ -112,13 +111,12 @@ public class EmpresaDAO {
 			pstm.setString(2, empresa.getCnpj());
 			pstm.setString(3, empresa.getEmail());
 			pstm.setString(4, empresa.getTelefone());
-			pstm.setByte(5, empresa.getImgLogo());
-			pstm.setString(6, empresa.getCep());			
-			pstm.setString(7, empresa.getEndereco());
-			pstm.setString(8, empresa.getCidade());
-			pstm.setString(9, empresa.getEstado());
-			pstm.setString(10, empresa.getVagas());
-			pstm.setLong(11, empresa.getId());
+			pstm.setString(5, empresa.getCep());			
+			pstm.setString(6, empresa.getEndereco());
+			pstm.setString(7, empresa.getCidade());
+			pstm.setString(8, empresa.getEstado());
+			pstm.setString(9, empresa.getVagas());
+			pstm.setLong(10, empresa.getId());
 
 			// Executa a sql para inserção dos dados
 			pstm.execute();
@@ -166,7 +164,6 @@ public class EmpresaDAO {
 				empresa.setCnpj(rset.getString("cnpj"));				
 				empresa.setEmail(rset.getString("email"));
 				empresa.setTelefone(rset.getString("telefone"));
-				empresa.setImgLogo(rset.getByte("imgLogo"));
 				empresa.setCep(rset.getString("cep"));
 				empresa.setEndereco(rset.getString("endereco"));
 				empresa.setCidade(rset.getString("cidade"));
@@ -217,7 +214,6 @@ public class EmpresaDAO {
 			empresa.setCnpj(rset.getString("cnpj"));				
 			empresa.setEmail(rset.getString("email"));
 			empresa.setTelefone(rset.getString("telefone"));
-			empresa.setImgLogo(rset.getByte("imgLogo"));
 			empresa.setCep(rset.getString("cep"));
 			empresa.setEndereco(rset.getString("endereco"));
 			empresa.setCidade(rset.getString("cidade"));
@@ -266,7 +262,6 @@ public class EmpresaDAO {
 			empresa.setCnpj(rset.getString("cnpj"));				
 			empresa.setEmail(rset.getString("email"));
 			empresa.setTelefone(rset.getString("telefone"));
-			empresa.setImgLogo(rset.getByte("imgLogo"));
 			empresa.setCep(rset.getString("cep"));
 			empresa.setEndereco(rset.getString("endereco"));
 			empresa.setCidade(rset.getString("cidade"));
