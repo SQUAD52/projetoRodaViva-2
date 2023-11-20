@@ -69,12 +69,12 @@
 
 							<div class="row">
 								<a href="./candidato-create?id=${empresa.id }"
-									class="btn btn-sm btn-primary">Candidatar-se</a> <a
+									class="btn btn-sm btn-primary my-1">Candidatar-se</a> <a
 									href="./empresa-update?id=${empresa.id }"
-									class="btn btn-sm btn-warning">editar</a> <a
+									class="btn btn-sm btn-warning my-1">editar</a> <a
 									href="./empresa-delete?id=${empresa.id }"
 									onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
-									class="btn btn-sm btn-danger">excluir</a>
+									class="btn btn-sm btn-danger my-1">excluir</a>
 							</div>
 							<hr class="border-dark">
 						</div>

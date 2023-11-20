@@ -1,0 +1,45 @@
+/* Logico_Roda_Viva: */
+
+CREATE TABLE Talento (
+    id BIGINT PRIMARY KEY auto_increment,
+    nome VARCHAR(50),
+    cpf VARCHAR(11),
+    dataNascimento DATE,
+    email VARCHAR(40),
+    formacao VARCHAR(1000),
+    telefone VARCHAR(11),
+    cep VARCHAR(9),
+    endereco VARCHAR(50),
+    cidade VARCHAR(40),
+    estado VARCHAR(2)
+);
+
+CREATE TABLE Empresa (
+    id BIGINT PRIMARY KEY auto_increment,
+    nome VARCHAR(50),
+    cnpj VARCHAR(14),
+    email VARCHAR(50),
+    telefone VARCHAR(11),
+    cep VARCHAR(9),
+    endereco VARCHAR(40),
+    cidade VARCHAR(40),
+    estado VARCHAR(2),
+    vagas VARCHAR(1000)
+);
+
+CREATE TABLE Candidato (
+    id BIGINT PRIMARY KEY auto_increment,
+    cargo VARCHAR(40),
+    idEmpresa BIGINT,
+    idTalento BIGINT
+);
+ 
+ALTER TABLE Candidato ADD CONSTRAINT FK_Candidato_2
+    FOREIGN KEY (idEmpresa)
+    REFERENCES Empresa (id)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Candidato ADD CONSTRAINT FK_Candidato_3
+    FOREIGN KEY (idTalento)
+    REFERENCES Talento (id)
+    ON DELETE SET NULL;
