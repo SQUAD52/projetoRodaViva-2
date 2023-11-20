@@ -24,8 +24,7 @@
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
-		<jsp:param value="./assets/img/logoRodaVivaSemFundo.png"
-			name="imglogo" />
+	
 		<jsp:param value="./" name="home" />
 		<jsp:param value="./talento" name="talentos" />
 		<jsp:param value="./curso" name="cursos" />

@@ -12,9 +12,10 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="../static/css/footer.css">
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
 <title>Editar Candidato</title>
 </head>
@@ -39,15 +40,17 @@
 
 			<fieldset>
 				<legend>Dados para Candidatar à vagas</legend>
-				
+
 				<div class="form-group my-3">
-					<label for="iId" class="form-label">Id:</label> <input
-						type="text" id="iId" name="nId" class="form-control" value="${candidato.id }" readonly required/>
+					<label for="iId" class="form-label">Id:</label> <input type="text"
+						id="iId" name="nId" class="form-control" value="${candidato.id }"
+						readonly required />
 				</div>
 
 				<div class="form-group my-3">
 					<label for="iCargo" class="form-label">Cargo:</label> <input
-						type="text" id="iCargo" name="nCargo" class="form-control" value="${candidato.cargo }" required/>
+						type="text" id="iCargo" name="nCargo" class="form-control"
+						value="${candidato.cargo }" required />
 				</div>
 
 				<div class="form-group my-3">

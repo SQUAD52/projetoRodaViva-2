@@ -12,6 +12,7 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 
 <script src="./assets/js/bootstrap.min.js"></script>
 <meta charset="utf-8">

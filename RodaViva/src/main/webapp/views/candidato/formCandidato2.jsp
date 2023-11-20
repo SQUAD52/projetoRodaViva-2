@@ -12,9 +12,10 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="../static/css/footer.css">
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
 <title>Formulario Candidato</title>
 </head>

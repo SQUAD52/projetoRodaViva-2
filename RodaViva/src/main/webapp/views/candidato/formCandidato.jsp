@@ -12,9 +12,10 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="../static/css/footer.css">
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
 <title>Formulario Candidato</title>
 </head>
@@ -42,7 +43,8 @@
 
 				<div class="form-group my-3">
 					<label for="iCargo" class="form-label">Cargo:</label> <input
-						type="text" id="iCargo" name="nCargo" class="form-control" required/>
+						type="text" id="iCargo" name="nCargo" class="form-control"
+						required />
 				</div>
 
 				<div class="form-group my-3">
@@ -50,7 +52,7 @@
 						type="text" id="iCPFTalento" name="nCpfTalento"
 						class="form-control"
 						placeholder="É necessario ter cadastro de Talento para se canditatar à vagas!"
-						maxlength="11"  required />
+						maxlength="11" required />
 				</div>
 
 				<div class="form-group my-3">

@@ -14,8 +14,8 @@
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous" />
 <script src="js/Cadastro.js"></script>
-<link rel="stylesheet" href="css/cadastro.css">
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>

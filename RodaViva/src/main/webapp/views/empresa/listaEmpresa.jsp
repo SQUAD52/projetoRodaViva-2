@@ -18,7 +18,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./assets/css/footer.css">
-<link rel="stylesheet" href="./assets/css/Talentos.css">
+<link rel="stylesheet" href="./assets/css/parceiros/estiloParceiros.css">
 </head>
 
 <body>
@@ -38,33 +38,8 @@
 	</jsp:include>
 	<!--Cards para perfil-->
 
-	<main class="container-fluid row">
-		<aside class=" bg-dark text-light col-sm-3">
-			<div class="row text-center">
-				<p class="fw-bold fs-5">Qualificação</p>
-			</div>
-			<div class="row text-center">
-				<p>Administração</p>
-			</div>
-			<div class="row text-center">
-				<p>Agronomia</p>
-			</div>
-			<div class="row text-center">
-				<p>Ciencias Contábeis</p>
-			</div>
-			<div class="row text-center">
-				<p>Direito</p>
-			</div>
-			<div class="row text-center">
-				<p>Engenharia</p>
-			</div>
-			<div class="row text-center">
-				<p>Enfermagem</p>
-			</div>
-			<div class="row text-center">
-				<p>Medicina</p>
-			</div>
-		</aside>
+	<main class="container-fluid row" id="listaParceiros">
+
 		<article class="col-sm" id="sectionPerfil">
 			<section class="container-fluid row" id="corpoEmpresas">
 				<div class="text-center text-muted my-3 row" id="msgTopo">

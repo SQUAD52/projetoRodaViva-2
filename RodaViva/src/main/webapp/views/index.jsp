@@ -12,8 +12,8 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="../static/css/footer.css">
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
 <title>Home</title>
 </head>
@@ -178,7 +178,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<img src="./assets/img/google.png" alt="google logo" class="img-fluid"
+					<img src="../assets/img/google.png" alt="google logo" class="img-fluid"
 						style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -216,7 +216,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<img src="./img/linkedin.png" alt="linkedin logo" class="img-fluid"
+					<img src="../assets/img/linkedin.png" alt="linkedin logo" class="img-fluid"
 						style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -236,7 +236,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<img src="./img/facebook.png" alt="facebook logo" class="img-fluid"
+					<img src="../assets/img/facebook.png" alt="facebook logo" class="img-fluid"
 						style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -264,7 +264,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="./img/img-homem (2).jpg"
+						<img src="../assets/img/img-homem (2).jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -288,7 +288,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="./img/img-mulher.jpg"
+						<img src="../assets/img/img-mulher.jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -313,7 +313,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="./img/img-homem.jpg" class="card-img-top rounded-circle"
+						<img src="../assets/img/img-homem.jpg" class="card-img-top rounded-circle"
 							alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -338,7 +338,7 @@
 				<div
 					class="card align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="./img/img-mulher (2).jpg"
+						<img src="../assets/img/img-mulher (2).jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -433,7 +433,7 @@
 							<a class="text-dark" style="text-decoration: none;" href="">Eventos</a>
 						</p>
 						<p class="lh-1">
-							<a class="text-dark" style="text-decoration: none;" href="">Parcerias</a>
+							<a class="text-dark" style="text-decoration: none;" href="../parceiro">Parcerias</a>
 						</p>
 					</div>
 					<p class="fw-bold">Quem somos?</p>
