@@ -135,7 +135,7 @@ public class CandidatoDAO {
 
 	}
 
-	public List<Candidato> getPassagens() {
+	public List<Candidato> getCandidatos() {
 
 		String sql = "SELECT * FROM candidato";
 

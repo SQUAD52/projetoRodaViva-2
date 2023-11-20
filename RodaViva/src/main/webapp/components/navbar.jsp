@@ -29,14 +29,15 @@
 					href=<%=request.getParameter("contatos")%>>Contato</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href=<%=request.getParameter("empresas")%>>Parceiros</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href=<%=request.getParameter("candidatos")%>>Candidatos</a></li>
 			</ul>
 			<!--Fim do menu-->
 
 			<!--Inicio login e cadastro-->
 			<div>
-				<a href="#"><button type="button"
-						class="btn btn-sm btn-dark">Login</button></a> <a
-					href=<%=request.getParameter("create-talentos")%>><button
+				<a href="#"><button type="button" class="btn btn-sm btn-dark">Login</button></a>
+				<a href=<%=request.getParameter("create-talentos")%>><button
 						type="button" class="btn btn-sm btn-light border-black">Cadastrar
 						talento</button></a> <a href=<%=request.getParameter("create-candidatos")%>><button
 						type="button" class="btn btn-sm btn-warning my-2 border-black">Candidatar

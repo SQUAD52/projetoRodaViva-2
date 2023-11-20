@@ -29,6 +29,7 @@
 		<jsp:param value="../biblioteca" name="biblioteca" />
 		<jsp:param value="../contato" name="contatos" />
 		<jsp:param value="../empresa" name="empresas" />
+		<jsp:param value="../candidato" name="candidatos" />
 		<jsp:param value="../talento-create" name="create-talentos" />
 		<jsp:param value="../candidato-create" name="create-candidatos" />
 		<jsp:param value="../empresa-create" name="create-empresas" />

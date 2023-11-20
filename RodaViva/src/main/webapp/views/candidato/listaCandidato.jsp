@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Empresas</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -17,10 +12,11 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./assets/css/footer.css">
-<link rel="stylesheet" href="./assets/css/Talentos.css">
-</head>
 
+<script src="./assets/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<title>Lista de Candidatos</title>
+</head>
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
@@ -36,82 +32,41 @@
 		<jsp:param value="./empresa-create" name="create-empresas" />
 
 	</jsp:include>
-	<!--Cards para perfil-->
 
-	<main class="container-fluid row">
-		<aside class=" bg-dark text-light col-sm-3">
-			<div class="row text-center">
-				<p class="fw-bold fs-5">Qualificação</p>
-			</div>
-			<div class="row text-center">
-				<p>Administração</p>
-			</div>
-			<div class="row text-center">
-				<p>Agronomia</p>
-			</div>
-			<div class="row text-center">
-				<p>Ciencias Contábeis</p>
-			</div>
-			<div class="row text-center">
-				<p>Direito</p>
-			</div>
-			<div class="row text-center">
-				<p>Engenharia</p>
-			</div>
-			<div class="row text-center">
-				<p>Enfermagem</p>
-			</div>
-			<div class="row text-center">
-				<p>Medicina</p>
-			</div>
-		</aside>
-		<article class="col-sm" id="sectionPerfil">
-			<section class="container-fluid row" id="corpoEmpresas">
-				<div class="text-center text-muted my-3 row" id="msgTopo">
-					<h1>Empresas Parceiras</h1>
-				</div>
-				<c:forEach items="${listaEmpresas}" var="empresa">
+	<div class="container-fluid">
 
-					<div class="col-sm border-bottom mb-3 ms-3 " style="width: 18em;">
-
-						<h1 class="text-center">${empresa.nome }</h1>
-
-						<hr />
-						<p class="card-text">
-							<label class="fw-bold">Telefone: </label> <label>${empresa.telefone }</label>
-						</p>
-						<hr>
-						<p class="card-text">
-							<label class="fw-bold">Email: </label> <label>${empresa.email }</label>
-						</p>
-						<p class="card-text">
-							<label class="fw-bold">Vagas Disponíveis: </label> <label>${empresa.vagas }</label>
-						</p>
-						<hr>
-
-						<div class="row">
-							<a href="./candidato-create?id=${empresa.id }"
-								class="btn btn-sm btn-primary">Candidatar-se</a> <a
-								href="./empresa-update?id=${empresa.id }"
-								class="btn btn-sm btn-warning">editar</a> <a
-								href="./empresa-delete?id=${empresa.id }"
-								onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
-								class="btn btn-sm btn-danger">excluir</a>
-						</div>
-					</div>
-					
-
-
+		<table class="table table-responsive table-hover">
+			<thead class="table-dark">
+				<tr class="text-center">
+					<th scope="col">Id</th>
+					<th scope="col">Talento</th>
+					<th scope="col">Empresa</th>
+					<th scope="col">Cargo</th>
+					<th scope="col">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${listaCandidatos}" var="candidato">
+					<tr class="text-center">
+						<th scope="row">${candidato.id}</th>
+						<td>${candidato.talento.nome}</td>
+						<td>${candidato.empresa.nome}</td>
+						<td>${candidato.cargo}</td>
+						<td>
+							<div class=text-center>
+								<a href="./candidato-update?id=${candidato.id}"
+									class="btn btn-success">Editar</a> <a
+									href="./candidato-delete?id=${candidato.id}"
+									onclick="return confirm('Deseja Excluir a candidato para ${candidato.empresa.cidade} de ${candidato.talento.nome }?')"
+									class="btn btn-danger">Excluir</a>
+							</div>
+						</td>
+					</tr>
 				</c:forEach>
 
-			</section>
-		</article>
-	</main>
-
-
-
-
-
+			</tbody>
+		</table>
+	</div>
 
 	<footer class="container-fluid bg-black text-center pt-4 pb-1">
 		<div class="socials">

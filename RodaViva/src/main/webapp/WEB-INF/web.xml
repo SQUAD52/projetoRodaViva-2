@@ -39,4 +39,14 @@
     <servlet-name>EmpresaController</servlet-name>
     <url-pattern>/EmpresaController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CandidatoController</display-name>
+    <servlet-name>CandidatoController</servlet-name>
+    <servlet-class>rodaviva.controller.CandidatoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CandidatoController</servlet-name>
+    <url-pattern>/CandidatoController</url-pattern>
+  </servlet-mapping>
 </web-app>

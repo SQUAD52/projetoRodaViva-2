@@ -29,6 +29,7 @@
 		<jsp:param value="../../biblioteca" name="biblioteca" />
 		<jsp:param value="../../contato" name="contatos" />
 		<jsp:param value="../../empresa" name="empresas" />
+		<jsp:param value="../../candidato" name="candidatos" />
 		<jsp:param value="../../talento-create" name="create-talentos" />
 		<jsp:param value="../../candidato-create" name="create-candidatos" />
 		<jsp:param value="../../empresa-create" name="create-empresas" />
@@ -46,23 +47,25 @@
 			</div>
 
 			<div class="form-group my-3">
-				<label for="iCnpj" class="form-label">CNPJ:</label> <input type="text"
-					id="iCnpj" name="nCNPJ" class="form-control" maxLength="14" required/>
+				<label for="iCnpj" class="form-label">CNPJ:</label> <input
+					type="text" id="iCnpj" name="nCNPJ" class="form-control"
+					maxLength="14" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEmail" class="form-label">Email:</label> <input
-					type="text" id="iEmail" name="nEmail" class="form-control" required/>
+					type="text" id="iEmail" name="nEmail" class="form-control" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iTelefone" class="form-label">Telefone:</label> <input
-					type="text" id="iTelefone" name="nTelefone" class="form-control" maxLength="11" required/>
+					type="text" id="iTelefone" name="nTelefone" class="form-control"
+					maxLength="11" required />
 			</div>
-			
+
 			<div class="form-group my-3">
 				<label for="iVagas" class="form-label">Vagas Disponíveis:</label> <input
-					type="text" id="iVagas" name="nVagas" class="form-control" required/>
+					type="text" id="iVagas" name="nVagas" class="form-control" required />
 			</div>
 
 
@@ -73,23 +76,25 @@
 
 			<div class="form-group my-3">
 				<label for="iCep" class="form-label">CEP:</label> <input type="text"
-					id="iCep" name="nCep" class="form-control" maxLength="9" required/>
+					id="iCep" name="nCep" class="form-control" maxLength="9" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEndereco" class="form-label">Endereço:</label> <input
-					type="text" id="iEndereco" name="nEndereco" class="form-control" required/>
+					type="text" id="iEndereco" name="nEndereco" class="form-control"
+					required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEstado" class="form-label">Estado:</label> <input
 					type="text" id="iEstado" name="nEstado" class="form-control"
-					placeholder="GO, DF, MT, AM, CE..." maxLength="2" required/>
+					placeholder="GO, DF, MT, AM, CE..." maxLength="2" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iCidade" class="form-label">Cidade:</label> <input
-					type="text" id="iCidade" name="nCidade" class="form-control" required/>
+					type="text" id="iCidade" name="nCidade" class="form-control"
+					required />
 			</div>
 		</fieldset>
 		<input type="submit" class="btn btn-primary" value="Cadastrar">
