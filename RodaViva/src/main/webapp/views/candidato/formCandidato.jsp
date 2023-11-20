@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +16,7 @@
 <link rel="stylesheet" href="../static/css/footer.css">
 <link rel="stylesheet" href="../static/css/bootstrap.min.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Formulario Candidato</title>
 </head>
 <body>
 	<!--Inicio do cabeçalho-->
@@ -31,65 +33,47 @@
 		<jsp:param value="./empresa-create" name="create-empresas" />
 
 	</jsp:include>
-	
+
 	<div class="container">
-			<form action="./candidato-create" class="" method="post">
-				<fieldset>
-					<legend>Pacote Promocional</legend>
-					<div class="form-group my-3">
+		<form action="./candidato-create" class="" method="post">
 
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="nPacotePromo"
-								id="iPacotePromo1" value="1" checked> <label
-								class="form-check-label font-weight-bold" for="iPacotePromo1">
-								Pacote Economica </label>
-						</div>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="nPacotePromo"
-								id="iPacotePromo2" value="2"> <label
-								class="form-check-label font-weight-bold" for="iPacotePromo2">
-								Pacote Tranquilidade </label>
-						</div>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="nPacotePromo"
-								id="iPacotePromo3" value="3"> <label
-								class="form-check-label font-weight-bold" for="iPacotePromo3">
-								Pacote Luxo </label>
-						</div>
-					</div>
-				</fieldset>
-				<fieldset>
-					<legend>Dados para Compra</legend>
+			<fieldset>
+				<legend>Dados para Candidatar à vagas</legend>
 
-					<div class="form-group my-3">
-						<label for="iDataViagem" class="form-label">Data da Viagem:</label> <input
-							type="date" id="iDataViagem" name="nDataViagem" class="form-control" />
-					</div>
+				<div class="form-group my-3">
+					<label for="iCargo" class="form-label">Cargo:</label> <input
+						type="text" id="iCargo" name="nCargo" class="form-control" required/>
+				</div>
 
-					<div class="form-group my-3">
-						<label for="iCPF" class="form-label">CPF:</label> <input
-							type="text" id="iCPFUsuario" name="nCpfUsuario" class="form-control" placeholder="É necessario ter cadastro de usuario, para realizar compras!"/>
-					</div>
-					
-					<div class="form-group my-3">
-						<label for="iEmpresa" class="form-label">Empresa:</label>
-						<select id="iEmpresa" name="nEmpresa">
+				<div class="form-group my-3">
+					<label for="iCPFTalento" class="form-label">CPF:</label> <input
+						type="text" id="iCPFTalento" name="nCpfTalento"
+						class="form-control"
+						placeholder="É necessario ter cadastro de Talento para se canditatar à vagas!"
+						maxlength="11"  required />
+				</div>
+
+				<div class="form-group my-3">
+					<label for="iEmpresa" class="form-label">Empresa:</label> <select
+						id="iEmpresa" name="nEmpresa">
 						<c:forEach items="${listaEmpresas }" var="empresa">
-						<option value="${empresa.id }">${empresa.nome} / ${empresa.cidade }</option>
+							<option value="${empresa.id }">${empresa.nome}/
+								${empresa.cidade }</option>
 						</c:forEach>
-						</select>
-					</div>
-					
-					
-					
-				</fieldset>
-				<input type="submit" class="btn btn-primary" value="Comprar">
-				<a href="./candidato" class="btn btn-danger">Cancelar</a>
-			</form>
-		</div>
-	
-	
-		<footer class="container-fluid bg-black text-center pt-4 pb-1">
+					</select>
+				</div>
+
+
+
+			</fieldset>
+			<input type="submit" class="btn btn-primary" value="Candidatar">
+			<a href="./" class="btn btn-danger">Cancelar</a>
+		</form>
+	</div>
+
+
+	<footer
+		class="container-fluid bg-black text-center pt-4 pb-1 fixed-bottom">
 		<div class="socials">
 			<a href="https://facebook.com/espacorodaviva"><i
 				class="fa fa-facebook"></i></a> <a
@@ -115,6 +99,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
 		integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
 		crossorigin="anonymous"></script>
-	
+
 </body>
 </html>

@@ -16,7 +16,8 @@ import rodaviva.model.Empresa;
 import rodaviva.model.Candidato;
 import rodaviva.model.Talento;
 
-@WebServlet(urlPatterns = { "/candidato", "/candidato-create", "/candidato-delete", "/candidato-update" })
+@WebServlet(urlPatterns = { "/candidato", "/candidato-create", "/candidato-create2", "/candidato-delete",
+		"/candidato-update" })
 public class CandidatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	CandidatoDAO cdao = new CandidatoDAO();
@@ -48,6 +49,10 @@ public class CandidatoController extends HttpServlet {
 
 		case "/candidato-create":
 			createCandidato(request, response);
+			break;
+
+		case "/candidato-create2":
+			createCandidato2(request, response);
 			break;
 		}
 	}
@@ -93,6 +98,20 @@ public class CandidatoController extends HttpServlet {
 
 	}
 
+	protected void createCandidato2(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		List<Empresa> lista = edao.getEmpresas();
+
+		Long id = Long.parseLong(request.getParameter("id"));
+		talento = tdao.getTalentoById(id);
+
+		request.setAttribute("talento", talento);
+		request.setAttribute("listaEmpresas", lista);
+		RequestDispatcher rd = request.getRequestDispatcher("./views/candidato/formCandidato2.jsp");
+		rd.forward(request, response);
+
+	}
+
 	protected void updateCandidato(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Long id = Long.parseLong(request.getParameter("id"));
@@ -113,7 +132,7 @@ public class CandidatoController extends HttpServlet {
 
 		Long idEmpresa = Long.parseLong(request.getParameter("nEmpresa"));
 		empresa = edao.getEmpresaById(idEmpresa);
-		
+
 		candidato.setId(Long.parseLong(request.getParameter("nId")));
 		candidato.setEmpresa(empresa);
 		candidato.setTalento(talento);
@@ -131,10 +150,9 @@ public class CandidatoController extends HttpServlet {
 		Long id = Long.parseLong(request.getParameter("nEmpresa"));
 		empresa = edao.getEmpresaById(id);
 
-
 		candidato.setEmpresa(empresa);
 		candidato.setTalento(talento);
-		candidato.setCargo(request.getParameter("nPacotePromo"));
+		candidato.setCargo(request.getParameter("nCargo"));
 		cdao.save(candidato);
 
 		response.sendRedirect("./candidato");

@@ -94,7 +94,7 @@ public class CandidatoDAO {
 	}
 
 	public void update(Candidato candidato) {
-		String sql = "UPDATE candidato SET cargo = ?, idEmpresa = ? idTalento = ? "
+		String sql = "UPDATE candidato SET cargo = ?, idEmpresa = ?, idTalento = ? "
 				+ "WHERE id = ?";
 
 		Connection conn = null;

@@ -101,7 +101,7 @@
 
 						</div>
 						<div class="card-footer text-body-secondary text-center">
-							<a href="./candidato-create?id=${talento.id }"
+							<a href="./candidato-create2?id=${talento.id }"
 								class="btn btn-sm btn-primary">Contratar</a> <a
 								href="./talento-update?id=${talento.id }"
 								class="btn btn-sm btn-warning">editar</a> <a
