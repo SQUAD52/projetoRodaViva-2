@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib prefix="c"
+  uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,9 +13,8 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="../assets/css/footer.css">
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<style><%@include file="../assets/css/footer.css"%></style>
 
 <title>Home</title>
 </head>
@@ -99,9 +100,10 @@
 			<h3 class="text-light text-center mb-5">Descubra especialista
 				com as habilidades que você precisa</h3>
 
-			<img src="./img/img.jpg" class="img-fluid rounded-start"
-				alt="mulher estudando">
-
+				
+				<img src="<c:url value="../img/img.jpg"/>" class="img-fluid rounded-start"
+				alt="mulher estudando">    
+				
 			<div class="card-body mt-5">
 
 				<h5 class="card-title text-light my-4">TI</h5>

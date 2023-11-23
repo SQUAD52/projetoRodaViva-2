@@ -17,8 +17,8 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./assets/css/footer.css">
-<link rel="stylesheet" href="./assets/css/Talentos.css">
+<style><%@include file="../../assets/css/footer.css"%></style>
+<style><%@include file="../../assets/css/Talentos.css"%></style>
 </head>
 
 <body>
