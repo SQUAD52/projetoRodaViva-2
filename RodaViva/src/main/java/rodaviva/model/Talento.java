@@ -14,7 +14,7 @@ public class Talento {
 	private String endereco;
 	private String cidade;
 	private String estado;
-	
+
 	public Talento() {
 		super();
 	}
@@ -122,7 +122,7 @@ public class Talento {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
-	
+
+
 
 }

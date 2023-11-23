@@ -19,7 +19,7 @@ public class ConectBanco {
 
 	public static void main(String[] args) throws Exception {
         Connection con = createConnectionToMySQL();
-        
+
         if(con !=null){
             System.out.println("COnexão obtida com sucesso");
             con.close();

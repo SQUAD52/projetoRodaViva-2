@@ -1,19 +1,19 @@
 package rodaviva.controller;
 
+import java.io.IOException;
+import java.util.List;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
-
-import rodaviva.dao.EmpresaDAO;
 import rodaviva.dao.CandidatoDAO;
+import rodaviva.dao.EmpresaDAO;
 import rodaviva.dao.TalentoDAO;
-import rodaviva.model.Empresa;
 import rodaviva.model.Candidato;
+import rodaviva.model.Empresa;
 import rodaviva.model.Talento;
 
 @WebServlet(urlPatterns = { "/candidato", "/candidato-create", "/candidato-create2", "/candidato-delete",

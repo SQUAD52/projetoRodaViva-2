@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
-<header class="navbar navbar-expand-lg bg-info-subtle shadow-sm">
+<header class="navbar navbar-expand-lg bg-info-subtle shadow-sm fixed-top">
 	<div class="container-fluid">
 		<a class="navbar-brand" href=<%=request.getParameter("home")%>></a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"

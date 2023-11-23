@@ -37,7 +37,7 @@ public class CandidatoDAO {
 
 			// Adiciona o valor do primeiro parametro da sql
 			pstm.setString(1, candidato.getCargo());
-			pstm.setLong(2, empresa.getId());			
+			pstm.setLong(2, empresa.getId());
 			pstm.setLong(3, talento.getId());
 
 
@@ -163,7 +163,7 @@ public class CandidatoDAO {
 				candidato.setTalento(talento);
 				empresa = edao.getEmpresaById(rset.getLong("idEmpresa"));
 				candidato.setEmpresa(empresa);
-				
+
 
 				// Adiciono o contato recuperado, a lista de contatos
 				candidatos.add(candidato);

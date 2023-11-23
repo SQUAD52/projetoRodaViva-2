@@ -1,5 +1,8 @@
 package rodaviva.controller;
 
+import java.io.IOException;
+import java.util.List;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,9 +11,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import rodaviva.dao.EmpresaDAO;
 import rodaviva.model.Empresa;
-
-import java.io.IOException;
-import java.util.List;
 
 @WebServlet(urlPatterns = { "/empresa", "/empresa-create", "/empresa-delete", "/empresa-update" })
 public class EmpresaController extends HttpServlet {
@@ -81,7 +81,7 @@ public class EmpresaController extends HttpServlet {
 	protected void createEmpresa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-	
+
 
 		empresa.setNome(request.getParameter("nNome"));
 		empresa.setCnpj(request.getParameter("nCNPJ"));
@@ -108,7 +108,7 @@ public class EmpresaController extends HttpServlet {
 
 	protected void postUpdateEmpresa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		empresa.setId(Long.parseLong(request.getParameter("nId")));
 		empresa.setNome(request.getParameter("nNome"));
 		empresa.setCnpj(request.getParameter("nCNPJ"));

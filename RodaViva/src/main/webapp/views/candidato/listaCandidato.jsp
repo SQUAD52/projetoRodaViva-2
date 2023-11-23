@@ -34,7 +34,7 @@
 
 	</jsp:include>
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top: 110px">
 
 		<table class="table table-responsive table-hover">
 			<thead class="table-dark">

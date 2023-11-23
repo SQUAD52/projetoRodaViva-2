@@ -38,7 +38,7 @@
 	</jsp:include>
 	<!--Cards para perfil-->
 
-	<main class="container-fluid row" id="listaParceiros">
+	<main class="container-fluid row" id="listaParceiros" style="margin-top: 110px">
 
 		<article class="col-sm" id="sectionPerfil">
 			<section class="container-fluid row" id="corpoEmpresas">

@@ -111,5 +111,5 @@ public class Empresa {
 		this.vagas = vagas;
 	}
 
-	
+
 }

@@ -35,7 +35,7 @@
 	</jsp:include>
 
 	<div class="container">
-		<form action="./candidato-create" class="" method="post">
+		<form action="./candidato-create" class="" method="post" style="margin-top: 110px">
 
 			<fieldset>
 				<legend>Dados para Candidatar à vagas</legend>

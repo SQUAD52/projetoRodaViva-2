@@ -36,7 +36,7 @@
 
 
 	<form action="./talento-update" class="container-fluid"
-		method="post">
+		method="post" style="margin-top: 110px">
 		<fieldset>
 			<legend class="my-3">Dados Pessoais</legend>
 			<div class="form-group my-3">

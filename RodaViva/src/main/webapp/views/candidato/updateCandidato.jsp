@@ -36,7 +36,7 @@
 	</jsp:include>
 
 	<div class="container">
-		<form action="./candidato-update" class="" method="post">
+		<form action="./candidato-update" class="" method="post" style="margin-top: 110px">
 
 			<fieldset>
 				<legend>Dados para Candidatar à vagas</legend>

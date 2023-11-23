@@ -1,5 +1,11 @@
 package rodaviva.controller;
 
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,12 +14,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import rodaviva.dao.TalentoDAO;
 import rodaviva.model.Talento;
-
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 @WebServlet(urlPatterns = { "/talento", "/talento-create", "/talento-delete", "/talento-update" })
 public class TalentoController extends HttpServlet {

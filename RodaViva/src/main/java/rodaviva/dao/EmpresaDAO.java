@@ -34,7 +34,7 @@ public class EmpresaDAO {
 			pstm.setString(2, empresa.getCnpj());
 			pstm.setString(3, empresa.getEmail());
 			pstm.setString(4, empresa.getTelefone());
-			pstm.setString(5, empresa.getCep());			
+			pstm.setString(5, empresa.getCep());
 			pstm.setString(6, empresa.getEndereco());
 			pstm.setString(7, empresa.getCidade());
 			pstm.setString(8, empresa.getEstado());
@@ -111,7 +111,7 @@ public class EmpresaDAO {
 			pstm.setString(2, empresa.getCnpj());
 			pstm.setString(3, empresa.getEmail());
 			pstm.setString(4, empresa.getTelefone());
-			pstm.setString(5, empresa.getCep());			
+			pstm.setString(5, empresa.getCep());
 			pstm.setString(6, empresa.getEndereco());
 			pstm.setString(7, empresa.getCidade());
 			pstm.setString(8, empresa.getEstado());
@@ -161,7 +161,7 @@ public class EmpresaDAO {
 				// Recupera o id do banco e atribui ele ao objeto
 				empresa.setId(rset.getLong("id"));
 				empresa.setNome(rset.getString("nome"));
-				empresa.setCnpj(rset.getString("cnpj"));				
+				empresa.setCnpj(rset.getString("cnpj"));
 				empresa.setEmail(rset.getString("email"));
 				empresa.setTelefone(rset.getString("telefone"));
 				empresa.setCep(rset.getString("cep"));
@@ -211,7 +211,7 @@ public class EmpresaDAO {
 
 			empresa.setId(rset.getLong("id"));
 			empresa.setNome(rset.getString("nome"));
-			empresa.setCnpj(rset.getString("cnpj"));				
+			empresa.setCnpj(rset.getString("cnpj"));
 			empresa.setEmail(rset.getString("email"));
 			empresa.setTelefone(rset.getString("telefone"));
 			empresa.setCep(rset.getString("cep"));
@@ -238,7 +238,7 @@ public class EmpresaDAO {
 		return empresa;
 
 	}
-	
+
 	public Empresa getEmpresaByCNPJ(String cnpj) {
 		String sql = "SELECT * FROM empresa where cnpj = ?";
 
@@ -259,7 +259,7 @@ public class EmpresaDAO {
 
 			empresa.setId(rset.getLong("id"));
 			empresa.setNome(rset.getString("nome"));
-			empresa.setCnpj(rset.getString("cnpj"));				
+			empresa.setCnpj(rset.getString("cnpj"));
 			empresa.setEmail(rset.getString("email"));
 			empresa.setTelefone(rset.getString("telefone"));
 			empresa.setCep(rset.getString("cep"));
