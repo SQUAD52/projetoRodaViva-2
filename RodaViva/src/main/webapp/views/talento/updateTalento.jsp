@@ -8,20 +8,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cadastro</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <script src="js/Cadastro.js"></script>
-<style><%@include file="../../assets/css/cadastro.css"%></style>
-<style><%@include file="../../assets/css/footer.css"%></style>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
 	<jsp:include page="/components/navbar.jsp">
-		<jsp:param value="./" name="home" />
+		<jsp:param value="./assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
+		<jsp:param value="./home" name="home" />
 		<jsp:param value="./talento" name="talentos" />
 		<jsp:param value="./curso" name="cursos" />
 		<jsp:param value="./biblioteca" name="biblioteca" />
@@ -35,43 +31,49 @@
 	</jsp:include>
 
 
-	<form action="./talento-update" class="container-fluid"
-		method="post" style="margin-top: 110px">
+	<form action="./talento-update" class="container-fluid" method="post"
+		style="margin-top: 110px">
 		<fieldset>
 			<legend class="my-3">Dados Pessoais</legend>
 			<div class="form-group my-3">
-				<label for="iId" class="form-label">Nome:</label> <input
-					type="text" id="iId" name="nId" class="form-control" value="${talento.id }" required readonly />
+				<label for="iId" class="form-label">Nome:</label> <input type="text"
+					id="iId" name="nId" class="form-control" value="${talento.id }"
+					required readonly />
 			</div>
 			<div class="form-group my-3">
 				<label for="iNome" class="form-label">Nome:</label> <input
-					type="text" id="iNome" name="nNome" class="form-control" value="${talento.nome }" required />
+					type="text" id="iNome" name="nNome" class="form-control"
+					value="${talento.nome }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iCpf" class="form-label">CPF:</label> <input type="text"
-					id="iCpf" name="nCPF" class="form-control" maxLength="11" value="${talento.cpf }" required/>
+					id="iCpf" name="nCPF" class="form-control" maxLength="11"
+					value="${talento.cpf }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iDataNascimento" class="form-label">Data Nasc. :</label>
 				<input type="date" id="iDataNascimento" name="nDataNascimento"
-					class="form-control" value="${talento.dataNascimento }" required/>
+					class="form-control" value="${talento.dataNascimento }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEmail" class="form-label">Email:</label> <input
-					type="text" id="iEmail" name="nEmail" class="form-control" value="${talento.email }" required/>
+					type="text" id="iEmail" name="nEmail" class="form-control"
+					value="${talento.email }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iFormacao" class="form-label">Formações:</label> <input
-					type="text" id="iFormacao" name="nFormacao" class="form-control" value="${talento.formacao }" required/>
+					type="text" id="iFormacao" name="nFormacao" class="form-control"
+					value="${talento.formacao }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iTelefone" class="form-label">Telefone:</label> <input
-					type="text" id="iTelefone" name="nTelefone" class="form-control" maxLength="11" value="${talento.telefone }" required/>
+					type="text" id="iTelefone" name="nTelefone" class="form-control"
+					maxLength="11" value="${talento.telefone }" required />
 			</div>
 
 
@@ -82,23 +84,27 @@
 
 			<div class="form-group my-3">
 				<label for="iCep" class="form-label">CEP:</label> <input type="text"
-					id="iCep" name="nCep" class="form-control" maxLength="9" value="${talento.cep }" required/>
+					id="iCep" name="nCep" class="form-control" maxLength="9"
+					value="${talento.cep }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEndereco" class="form-label">Endereço:</label> <input
-					type="text" id="iEndereco" name="nEndereco" class="form-control" value="${talento.endereco }" required/>
+					type="text" id="iEndereco" name="nEndereco" class="form-control"
+					value="${talento.endereco }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEstado" class="form-label">Estado:</label> <input
 					type="text" id="iEstado" name="nEstado" class="form-control"
-					placeholder="GO, DF, MT, AM, CE..." maxLength="2" value="${talento.estado }" required/>
+					placeholder="GO, DF, MT, AM, CE..." maxLength="2"
+					value="${talento.estado }" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iCidade" class="form-label">Cidade:</label> <input
-					type="text" id="iCidade" name="nCidade" class="form-control" value="${talento.cidade }" required/>
+					type="text" id="iCidade" name="nCidade" class="form-control"
+					value="${talento.cidade }" required />
 			</div>
 		</fieldset>
 		<input type="submit" class="btn btn-primary" value="Atualizar">

@@ -7,23 +7,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cursos</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<style><%@include file="../assets/css/footer.css"%></style>
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
-		
-		<jsp:param value="./" name="home" />
+		<jsp:param value="../assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
+		<jsp:param value="../" name="home" />
 		<jsp:param value="../talento" name="talentos" />
 		<jsp:param value="../curso" name="cursos" />
 		<jsp:param value="../biblioteca" name="biblioteca" />
@@ -56,7 +49,7 @@
 					href="https://recode.org.br/desenvolvimento-web-basico/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/desenvolvimento web.jpeg"
+						<img src="../assets/img/img-cursos/desenvolvimento web.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Desenvolvimento Web</h6>
@@ -69,8 +62,8 @@
 					href="https://recode.org.br/analise-de-dados-com-ferramentas-de-business-intelligence/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/power BI.jpeg" class="img-fluid"
-							alt="thumbnail curso">
+						<img src="../assets/img/img-cursos/power BI.jpeg"
+							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Power BI</h6>
 						</div>
@@ -82,7 +75,7 @@
 					href="https://recode.org.br/metodologias-ativas/" target="_blank"
 					style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/metodoligias ativas.jpeg"
+						<img src="../assets//img/img-cursos/metodoligias ativas.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Metodologias Ativas</h6>
@@ -94,8 +87,8 @@
 				<a class="text-dark" href="https://recode.org.br/powerplatform/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/power plataform.jpeg" class="img-fluid"
-							alt="thumbnail curso">
+						<img src="../assets/img/img-cursos/power plataform.jpeg"
+							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Power Plataform</h6>
 						</div>
@@ -107,7 +100,7 @@
 					href="https://recode.org.br/desenvolvimento-de-games-basico/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/desenvolvimento de games.jpeg"
+						<img src="../assets/img/img-cursos/desenvolvimento de games.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Desenvolvimento de Games</h6>
@@ -120,7 +113,7 @@
 					href="https://recode.org.br/criando-infra-na-nuvem/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/criar infra na nuvem.jpeg"
+						<img src="../assets/img/img-cursos/criar infra na nuvem.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Infra na Nuvem</h6>
@@ -133,7 +126,7 @@
 					href="https://recode.org.br/ferramentas-digitais-para-o-mercado-de-trabalho/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/ferramentas digitais.jpeg"
+						<img src="../assets/img/img-cursos/ferramentas digitais.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Ferramentas Digitais</h6>
@@ -146,7 +139,7 @@
 					href="https://recode.org.br/gestao-e-empregabilidade/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/gestão e empregabilidade.jpeg"
+						<img src="../assets/img/img-cursos/gestão e empregabilidade.jpeg"
 							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Gestão e Empregabilidade</h6>
@@ -158,8 +151,8 @@
 				<a class="text-dark" href="https://recode.org.br/programacao/"
 					target="_blank" style="text-decoration: none;">
 					<div class="card rounded-3">
-						<img src="./img/img-cursos/programação.jpeg" class="img-fluid"
-							alt="thumbnail curso">
+						<img src="../assets/img/img-cursos/programação.jpeg"
+							class="img-fluid" alt="thumbnail curso">
 						<div class="card-body">
 							<h6 class="card-title">Programação</h6>
 						</div>

@@ -10,20 +10,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Empresas</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<style><%@include file="../../assets/css/footer.css"%></style>
-<style><%@include file="../../assets/css/parceiros/estiloParceiros.css"%></style>
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<script src="js/Cadastro.js"></script>
+<link rel="stylesheet" href="./assets/css/cadastro.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
+		<jsp:param value="./assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
 		<jsp:param value="./" name="home" />
 		<jsp:param value="./talento" name="talentos" />
 		<jsp:param value="./curso" name="cursos" />
@@ -38,7 +35,8 @@
 	</jsp:include>
 	<!--Cards para perfil-->
 
-	<main class="container-fluid row" id="listaParceiros" style="margin-top: 110px">
+	<main class="container-fluid row" id="listaParceiros"
+		style="margin-top: 110px">
 
 		<article class="col-sm" id="sectionPerfil">
 			<section class="container-fluid row" id="corpoEmpresas">
@@ -47,41 +45,39 @@
 				</div>
 
 
-					<c:forEach items="${listaEmpresas}" var="empresa">
+				<c:forEach items="${listaEmpresas}" var="empresa">
 
-						<div class="col-sm-4 border-bottom mb-3 ms-3 "
-							style="width: 18em;">
+					<div class="col-sm-4 border-bottom mb-3 ms-3 " style="width: 18em;">
 
-							<h1 class="text-center">${empresa.nome }</h1>
+						<h2 class="text-center text-muted">${empresa.nome }</h2>
 
 
-							<p class="card-text">
-								<label class="fw-bold">Telefone: </label> <label>${empresa.telefone }</label>
-							</p>
-							<hr>
-							<p class="card-text">
-								<label class="fw-bold">Email: </label> <label>${empresa.email }</label>
-							</p>
-							<p class="card-text">
-								<label class="fw-bold">Vagas Disponíveis: </label> <label>${empresa.vagas }</label>
-							</p>
-							<hr>
+						<p class="card-text">
+							<label class="fw-bold">Telefone: </label> <label>${empresa.telefone }</label>
+						</p>
+						<p class="card-text">
+							<label class="fw-bold">Email: </label> <label>${empresa.email }</label>
+						</p>
+						<p class="card-text">
+							<label class="fw-bold">Vagas Disponíveis: </label> <label>${empresa.vagas }</label>
+						</p>
+						<hr>
 
-							<div class="row">
-								<a href="./candidato-create?id=${empresa.id }"
-									class="btn btn-sm btn-primary my-1">Candidatar-se</a> <a
-									href="./empresa-update?id=${empresa.id }"
-									class="btn btn-sm btn-warning my-1">editar</a> <a
-									href="./empresa-delete?id=${empresa.id }"
-									onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
-									class="btn btn-sm btn-danger my-1">excluir</a>
-							</div>
-							<hr class="border-dark">
+						<div class="row">
+							<a href="./candidato-create?id=${empresa.id }"
+								class="btn btn-sm btn-primary my-1">Candidatar-se</a> <a
+								href="./empresa-update?id=${empresa.id }"
+								class="btn btn-sm btn-warning my-1">editar</a> <a
+								href="./empresa-delete?id=${empresa.id }"
+								onclick="return confirm('Deseja Excluir o usuario ${empresa.nome}?')"
+								class="btn btn-sm btn-danger my-1">excluir</a>
 						</div>
+						<hr class="border-dark">
+					</div>
 
 
 
-					</c:forEach>
+				</c:forEach>
 			</section>
 		</article>
 	</main>

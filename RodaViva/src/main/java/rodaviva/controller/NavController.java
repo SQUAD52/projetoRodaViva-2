@@ -2,14 +2,21 @@ package rodaviva.controller;
 
 import java.io.IOException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+// A rota "/" estava conflitando com o sistema  use "/home" no lugar.
+// e quando vc usa esse codigo >>> response.sendRedirect("./views/index.jsp");
+// vc dee buscar a imagem pastas voltando a quantidade de pastas que tem ate a imagem.
 
-@WebServlet(urlPatterns = { "/", "/contato", "/curso", "/biblioteca" })
+
+
+
+@WebServlet(urlPatterns = { "/home", "/contato", "/curso", "/biblioteca" })
 public class NavController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +31,7 @@ public class NavController extends HttpServlet {
 		String action = request.getServletPath();
 
 		switch (action) {
-		case "/":
+		case "/home":
 			pageHome(request, response);
 			break;
 

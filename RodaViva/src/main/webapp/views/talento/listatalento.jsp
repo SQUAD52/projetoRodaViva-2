@@ -7,25 +7,21 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	charset="UTF-8" />
 <title>Talentos</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<style><%@include file="../../assets/css/footer.css"%></style>
-<style><%@include file="../../assets/css/Talentos.css"%></style>
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/Talentos.css">
+
 </head>
 
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
-	
-		<jsp:param value="./" name="home" />
+		<jsp:param value="./assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
+		<jsp:param value="./home" name="home" />
 		<jsp:param value="./talento" name="talentos" />
 		<jsp:param value="./curso" name="cursos" />
 		<jsp:param value="./biblioteca" name="biblioteca" />
@@ -73,7 +69,8 @@
 						sua empresa.</h1>
 				</div>
 				<c:forEach items="${listaTalentos}" var="talento">
-					<div class="card mb-3 mx-3 border-dark " style="width: 18rem;">
+					<div class="card mb-3 mx-3 border-dark" style="width: 18rem">
+
 						<div class="card-header fw-bold text-center">${talento.nome}</div>
 						<div class="card-body">
 							<p>
@@ -96,7 +93,7 @@
 							<p>
 								<label class="fw-bold">Estado: </label> <label>${talento.estado }</label>
 							</p>
-							
+
 
 						</div>
 						<div class="card-footer text-body-secondary text-center">

@@ -8,21 +8,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cadastro Empresa</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
+<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
 <script src="js/Cadastro.js"></script>
-<style><%@include file="../../assets/css/cadastro.css"%></style>
-<style><%@include file="../../assets/css/footer.css"%></style>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../assets/css/cadastro.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
 </head>
 <body>
 	<jsp:include page="/components/navbar.jsp">
-
-		<jsp:param value="../" name="home" />
+		<jsp:param value="../../assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
+		<jsp:param value="../../home" name="home" />
 		<jsp:param value="../../talento" name="talentos" />
 		<jsp:param value="../../curso" name="cursos" />
 		<jsp:param value="../../biblioteca" name="biblioteca" />

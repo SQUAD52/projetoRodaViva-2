@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8" />
 
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 
 <title>Home</title>
 </head>
@@ -15,17 +15,17 @@
 <body>
 	<!--Inicio do cabeçalho-->
 	<jsp:include page="/components/navbar.jsp">
-		<jsp:param value="../assets/img/logoRodaVivaSemFundoPeq.png" name="logo" />
-		<jsp:param value="../home" name="home" />
-		<jsp:param value="../talento" name="talentos" />
-		<jsp:param value="../curso" name="cursos" />
-		<jsp:param value="../biblioteca" name="biblioteca" />
-		<jsp:param value="../contato" name="contatos" />
-		<jsp:param value="../empresa" name="empresas" />
-		<jsp:param value="../candidato" name="candidatos" />
-		<jsp:param value="../talento-create" name="create-talentos" />
-		<jsp:param value="../candidato-create" name="create-candidatos" />
-		<jsp:param value="../empresa-create" name="create-empresas" />
+		<jsp:param value="./assets/img/logoRodaVivaSemFundoPeq.png" name="logo" />
+		<jsp:param value="./home" name="home" />
+		<jsp:param value="./talento" name="talentos" />
+		<jsp:param value="./curso" name="cursos" />
+		<jsp:param value="./biblioteca" name="biblioteca" />
+		<jsp:param value="./contato" name="contatos" />
+		<jsp:param value="./empresa" name="empresas" />
+		<jsp:param value="./candidato" name="candidatos" />
+		<jsp:param value="./talento-create" name="create-talentos" />
+		<jsp:param value="./candidato-create" name="create-candidatos" />
+		<jsp:param value="./empresa-create" name="create-empresas" />
 
 	</jsp:include>
 
@@ -40,9 +40,9 @@
 				contribua com diversidade e competitividade no mercado de trabalho.</p>
 		</div>
 		<div class="btn-group gap-1 flex-wrap mt-5">
-			<a href="../talento-create"><button type="button"
+			<a href="./talento-create"><button type="button"
 					class="btn btn-light border-black">Cadastre-se como
-					talento</button></a> <a href="../candidato-create"><button type="button"
+					talento</button></a> <a href="./candidato-create"><button type="button"
 					class="btn btn-warning">Candidatar à vagas</button></a>
 		</div>
 	</section>
@@ -174,7 +174,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<img src="../assets/img/google.png" alt="google logo"
+					<img src="./assets/img/google.png" alt="google logo"
 						class="img-fluid" style="max-width: 3rem;" />
 				</div>
 				<div class="col">
@@ -193,7 +193,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<img src="../assets/img/ibm.png" alt="ibm logo" class="img-fluid"
+					<img src="./assets/img/ibm.png" alt="ibm logo" class="img-fluid"
 						style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -212,7 +212,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<img src="../assets/img/linkedin.png" alt="linkedin logo"
+					<img src="./assets/img/linkedin.png" alt="linkedin logo"
 						class="img-fluid" style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -232,7 +232,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<img src="../assets/img/facebook.png" alt="facebook logo"
+					<img src="./assets/img/facebook.png" alt="facebook logo"
 						class="img-fluid" style="max-width: 3rem;">
 				</div>
 				<div class="col">
@@ -260,7 +260,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="../assets/img/img-homem (2).jpg"
+						<img src="./assets/img/img-homem (2).jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -284,7 +284,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="../assets/img/img-mulher.jpg"
+						<img src="./assets/img/img-mulher.jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -309,7 +309,7 @@
 				<div
 					class="card  align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="../assets/img/img-homem.jpg"
+						<img src="./assets/img/img-homem.jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -334,7 +334,7 @@
 				<div
 					class="card align-items-center pt-3 pb-1 bg-body-tertiary shadow ">
 					<div class="container-fluid d-inline-flex gap-2 align-items-center">
-						<img src="../assets/img/img-mulher (2).jpg"
+						<img src="./assets/img/img-mulher (2).jpg"
 							class="card-img-top rounded-circle" alt="..." style="width: 20%;">
 
 						<p class="card-text lh-2">
@@ -430,7 +430,7 @@
 						</p>
 						<p class="lh-1">
 							<a class="text-dark" style="text-decoration: none;"
-								href="../parceiro">Parcerias</a>
+								href="./parceiro">Parcerias</a>
 						</p>
 					</div>
 					<p class="fw-bold">Quem somos?</p>

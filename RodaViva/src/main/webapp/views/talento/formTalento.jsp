@@ -8,21 +8,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cadastro</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-	crossorigin="anonymous" />
+
 <script src="js/Cadastro.js"></script>
-<style><%@include file="../../assets/css/cadastro.css"%></style>
-<style><%@include file="../../assets/css/footer.css"%></style>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/css/cadastro.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
 </head>
 <body>
 	<jsp:include page="/components/navbar.jsp">
-	
-		<jsp:param value="../" name="home" />
+		<jsp:param value="../../assets/img/logoRodaVivaSemFundoPeq.png"
+			name="logo" />
+		<jsp:param value="../../home" name="home" />
 		<jsp:param value="../../talento" name="talentos" />
 		<jsp:param value="../../curso" name="cursos" />
 		<jsp:param value="../../biblioteca" name="biblioteca" />
@@ -47,28 +43,30 @@
 
 			<div class="form-group my-3">
 				<label for="iCpf" class="form-label">CPF:</label> <input type="text"
-					id="iCpf" name="nCPF" class="form-control" maxLength="11" required/>
+					id="iCpf" name="nCPF" class="form-control" maxLength="11" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iDataNascimento" class="form-label">Data Nasc. :</label>
 				<input type="date" id="iDataNascimento" name="nDataNascimento"
-					class="form-control" required/>
+					class="form-control" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEmail" class="form-label">Email:</label> <input
-					type="text" id="iEmail" name="nEmail" class="form-control" required/>
+					type="text" id="iEmail" name="nEmail" class="form-control" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iFormacao" class="form-label">Formações:</label> <input
-					type="text" id="iFormacao" name="nFormacao" class="form-control" required/>
+					type="text" id="iFormacao" name="nFormacao" class="form-control"
+					required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iTelefone" class="form-label">Telefone:</label> <input
-					type="text" id="iTelefone" name="nTelefone" class="form-control" maxLength="11" required/>
+					type="text" id="iTelefone" name="nTelefone" class="form-control"
+					maxLength="11" required />
 			</div>
 
 
@@ -79,23 +77,25 @@
 
 			<div class="form-group my-3">
 				<label for="iCep" class="form-label">CEP:</label> <input type="text"
-					id="iCep" name="nCep" class="form-control" maxLength="9" required/>
+					id="iCep" name="nCep" class="form-control" maxLength="9" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEndereco" class="form-label">Endereço:</label> <input
-					type="text" id="iEndereco" name="nEndereco" class="form-control" required/>
+					type="text" id="iEndereco" name="nEndereco" class="form-control"
+					required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iEstado" class="form-label">Estado:</label> <input
 					type="text" id="iEstado" name="nEstado" class="form-control"
-					placeholder="GO, DF, MT, AM, CE..." maxLength="2" required/>
+					placeholder="GO, DF, MT, AM, CE..." maxLength="2" required />
 			</div>
 
 			<div class="form-group my-3">
 				<label for="iCidade" class="form-label">Cidade:</label> <input
-					type="text" id="iCidade" name="nCidade" class="form-control" required/>
+					type="text" id="iCidade" name="nCidade" class="form-control"
+					required />
 			</div>
 		</fieldset>
 		<input type="submit" class="btn btn-primary" value="Cadastrar">
